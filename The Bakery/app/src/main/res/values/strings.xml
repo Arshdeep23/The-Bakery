@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">The Bakery</string>
+    <string name="app_widget_bakery_text">EXAMPLE</string>
+    <string name="add_widget_bakery">Add widget</string>
+</resources>

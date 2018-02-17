@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thebakery">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/big_cake"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/big_cake"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.thebakery.TheBakeryActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.thebakery.Desc.BakeryDetailedList"
+            android:parentActivityName="com.example.thebakery.TheBakeryActivity" />
+        <activity
+            android:name="com.example.thebakery.BakerySteps.FullBakeryDescription" />
+
+        <provider
+            android:name="com.example.thebakery.provider.BakeryContentProvider"
+            android:authorities="com.example.thebakery"
+            android:exported="true" />
+
+        <service android:name="com.example.thebakery.Bakeryservices.BakeryReplacingTitleService" />
+        <service android:name="com.example.thebakery.widget.MyWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <receiver android:name="com.example.thebakery.widget.WidgetList">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_bakery_list_info" />
+        </receiver>
+    </application>
+
+</manifest>
