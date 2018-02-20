@@ -15,4 +15,5 @@ It also displays the steps to create the recipe. Also if the videos are availabl
 ![screenshot_20180217-220528](https://user-images.githubusercontent.com/13187257/36425695-8c133450-166d-11e8-85fb-3514fa40895d.png)
 
 ![screenshot_20180217-220538](https://user-images.githubusercontent.com/13187257/36425696-8c735a4c-166d-11e8-8006-ca0503d32cb7.png)
+
 Look at this, if you accidently close the app and your dish is a favourite for you, it has a widget that displays the ingredients.
